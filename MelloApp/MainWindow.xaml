@@ -1,0 +1,23 @@
+﻿<Window x:Class="MelloApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MelloApp"
+        mc:Ignorable="d"
+        Title="MelloApp"
+         Height="450" Width="800"
+         SizeToContent="WidthAndHeight">
+    <StackPanel Background="#000">
+        <Image Height="200" Source="bilder/melodifestivalen.png"></Image>
+        <Label Margin="10" FontSize="24" Foreground="#FFF">Rösta på din favoritlåt</Label>
+        <Button Name="röd" Click="KlickRösta" FontWeight="Bold" Margin="5" Padding="5" Background="Red" Foreground="#FFF">Röd</Button>
+        <Button Name="grön" Click="KlickRösta" FontWeight="Bold" Margin="5" Padding="5" Background="Green" Foreground="#FFF">Grön</Button>
+        <Button Name="blå" Click="KlickRösta" FontWeight="Bold" Margin="5" Padding="5" Background="Blue" Foreground="#FFF">Blå</Button>
+        <Button Name="gul" Click="KlickRösta" FontWeight="Bold" Margin="5" Padding="5" Background="Yellow">Gul</Button>
+        <Button Name="lila" Click="KlickRösta" FontWeight="Bold" Margin="5" Padding="5" Background="Purple" Foreground="#FFF">Lila</Button>
+        <Label Margin="10 10 10 0" Foreground="#FFF">Antal röster:</Label>
+        <TextBox Name="txbResultat" Margin="10 0 10 10" Padding="10"></TextBox>
+        <Button Click="KlickÅterställ">Återställ röster</Button>
+    </StackPanel>
+</Window>
