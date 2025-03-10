@@ -1,0 +1,29 @@
+﻿<Window x:Class="BrannbollApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:BrannbollApp"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="450" Width="800"
+    SizeToContent="WidthAndHeight"
+    MinWidth="200" MinHeight="200" MaxHeight="600" MaxWidth="1000">
+
+    <StackPanel Margin="10">
+        <Label FontSize="30">Brännbollsräknare</Label>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label>Lag inne:</Label>
+            <TextBox FontSize="18" FontWeight="Bold" Name="txbInne" Width="50"></TextBox>
+            <Label>Lag ute:</Label>
+            <TextBox FontSize="18" FontWeight="Bold" Name="txbUte" Width="50"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="100" Margin="10" Padding="5" Click="KlickFrivarv">Frivarv</Button>
+            <Button Width="100" Margin="10" Padding="5" Click="KlickBränning">Bränning</Button>
+            <Button Width="100" Margin="10" Padding="5" Click="KlickLyra">Lyra</Button>
+            <Button Width="100" Margin="10" Padding="5" Click="KlickVarv">Varv</Button>
+        </StackPanel>
+        <Label>Historik</Label>
+        <TextBox Name="txbHistorik"></TextBox>
+    </StackPanel>
+</Window>
