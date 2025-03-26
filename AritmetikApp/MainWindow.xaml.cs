@@ -25,24 +25,36 @@ public partial class MainWindow : Window
         string tal1Text = txbTal1.Text.Trim();
         string tal2Text = txbTal2.Text.Trim();
 
-        int tal1 = StringTillInt(tal1Text);
-        int tal2 = StringTillInt(tal2Text);
-        string matteTyp = txbOperator.Text;
+        string matteTyp = txbOperator.Text.Trim();
 
-        if (matteTyp == "*")
+        
+
+        if (double.TryParse(tal1Text, out double tal1) && double.TryParse(tal2Text, out double tal2))
         {
-            lblResultat.Content = tal1 * tal2;
+            if (matteTyp == "+")
+            {
+                lblResultat.Content = tal1 + tal2;
+            }
+            else if (matteTyp == "-")
+            {
+                lblResultat.Content = tal1 - tal2;
+            }
+            else if (matteTyp == "/")
+            {
+                lblResultat.Content = tal1 / tal2;
+            }
+            else if (matteTyp == "*")
+            {
+                lblResultat.Content = tal1 * tal2;
+            }
+            else
+            {
+                lblResultat.Content = "Fel. Ange giltig operator";
+            }
         }
         else
         {
-
+            lblResultat.Content = "Fel. Ange giltigt heltal";
         }
-
-    }
-
-    private int StringTillInt(string text)
-    {
-        int.TryParse(text, out int tal);
-        return tal;
     }
 }
